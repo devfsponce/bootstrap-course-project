@@ -17,7 +17,7 @@
     <script src="https://kit.fontawesome.com/7c5d2c1141.js" crossorigin="anonymous"></script>
 
     <!--CSS-->
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/styles.css" />
 
     <!--Open Iconic-->
     <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css" />
@@ -338,7 +338,7 @@
                 <a href="#"><i class="fa fa-linkedin"></i></a>
                 <a href="#"><i class="fa fa-twitter"></i></a>
               </div>
-              <button class="btn btn-primary btn-reserva" data-toggle="modal" data-target="#reservar">Reservar</button>
+              <button class="btn btn-primary btn-reserva" data-toggle="modal" data-target="#reservar" id="reserva-btn">Reservar</button>
             </div>
           </div>
 
@@ -357,7 +357,7 @@
                 <a href="#"><i class="fa fa-linkedin"></i></a>
                 <a href="#"><i class="fa fa-twitter"></i></a>
               </div>
-              <button class="btn btn-primary btn-reserva" data-toggle="modal" data-target="#reservar">Reservar</button>
+              <button class="btn btn-primary btn-reserva" data-toggle="modal" data-target="#reservar" id="reserva-btn">Reservar</button>
             </div>
           </div>
 
@@ -376,7 +376,7 @@
                 <a href="#"><i class="fa fa-linkedin"></i></a>
                 <a href="#"><i class="fa fa-twitter"></i></a>
               </div>
-              <button class="btn btn-primary btn-reserva" data-toggle="modal" data-target="#reservar">Reservar</button>
+              <button class="btn btn-primary btn-reserva" data-toggle="modal" data-target="#reservar" id="reversa-btn">Reservar</button>
             </div>
           </div>
         </div>
@@ -519,8 +519,31 @@
       });
 
       $('.carousel').carousel({
-        interval: 2000
+        interval: 1000
       });
+
+      $('#reserva').on('show.bs.modal', function(e){
+        console.log('Modal Activo');
+
+        $('#reserva-btn').removeClass('btn-primary');
+        $('#reserva-btn').addClass('btn-outline-success');
+        $('#reserva-btn').prop('disable', true);
+      });
+
+      $('#reserva').on('shown.bs.modal', function(e){
+        console.log('Modal se activó');
+        });
+
+        $('#reserva').on('hide.bs.modal', function(e){
+        console.log('Modal desactivandose');
+        });
+
+        $('#reserva').on('hidden.bs.modal', function(e){
+        console.log('Modal se desactivó');
+        $('#reserva-btn').prop('disabled', false);
+        });
+
+
     </script>
   </body>
 </html>

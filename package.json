@@ -4,7 +4,8 @@
   "description": "Proyecto del curso de bootstrap - coursera ",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -o css/ css/"
   },
   "repository": {
     "type": "git",
@@ -14,7 +15,8 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/FedeSPonce/atpp-bootstrap#readme",
   "devDependencies": {
-    "lite-server": "^2.5.4"
+    "lite-server": "^2.5.4",
+    "node-sass": "^4.14.1"
   },
   "dependencies": {
     "bootstrap": "^4.5.3",

@@ -1,0 +1,25 @@
+{
+  "name": "atpp-bootstrap",
+  "version": "1.0.0",
+  "description": "Proyecto del curso de bootstrap - coursera ",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://FedeSPonce@bitbucket.org/FedeSPonce/atpp-bootstrap.git"
+  },
+  "author": "Federico Sebastian Ponce",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/FedeSPonce/atpp-bootstrap#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
+    "open-iconic": "^1.1.1",
+    "popper.js": "^1.16.1"
+  }
+}

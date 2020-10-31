@@ -8,20 +8,16 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <!-- Bootstrap CSS -->
+    <!-- build:css dist/index.css-->
     <link
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
-
-    <script src="https://kit.fontawesome.com/7c5d2c1141.js" crossorigin="anonymous"></script>
-
-    <!--CSS-->
-    <link rel="stylesheet" href="css/styles.css" />
-
-    <!--Open Iconic-->
-    <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css" />
-
+    <link rel="stylesheet" href="css/main.css" />
+     <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css" />
+     <!--endbuild-->      
+   
+    <script script src="https://kit.fontawesome.com/7c5d2c1141.js" crossorigin="anonymous"></script>
 
     <title>ATPP</title>
   </head>
@@ -499,8 +495,9 @@
     </footer>
 
     <!-- SCRIPTS -->
+    <!-- build:js dist/index.js -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <script>
@@ -542,8 +539,9 @@
         console.log('Modal se desactivó');
         $('#reserva-btn').prop('disabled', false);
         });
-
+        
 
     </script>
+    <!-- endbuild -->
   </body>
 </html>

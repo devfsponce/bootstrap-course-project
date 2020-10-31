@@ -4,8 +4,15 @@
   "description": "Proyecto del curso de bootstrap - coursera ",
   "main": "index.html",
   "scripts": {
+    "dev": "lite-server",
+    "start": "concurrently \"npm run watch:scss\" \"npm run dev\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass -o css/ css/"
+    "scss": "node-sass -o css/ css/",
+    "watch:scss": "onchange 'css/*.css' -- npm run scss",
+    "clean": "rimraf dist",
+    "imagemin": "imagenmin imag/* --out-dir dist/img",
+    "usemin":"usemin index.html -d dist --htmlmin -o dist/index.html && usemin asociate.html -d dist --htmlmin -o dist/asociate.html && usemin profesionales.html -d dist --htmlmin -o dist/profesionales.html && usemin psicomotricidad.html -d dist --htmlmin -o dist/psicomotricidad.html",
+    "build": "npm run clean && npm run scss  && npm run imagemin && npm run usemin"
   },
   "repository": {
     "type": "git",
@@ -15,11 +22,20 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/FedeSPonce/atpp-bootstrap#readme",
   "devDependencies": {
+    "copyfiles": "^2.4.0",
+    "cssmin": "^0.4.3",
+    "htmlmin": "0.0.7",
+    "less": "^3.12.2",
     "lite-server": "^2.5.4",
-    "node-sass": "^4.14.1"
+    "node-sass": "^4.14.1",
+    "onchange": "^7.1.0",
+    "rimraf": "^3.0.2",
+    "uglifyjs": "^2.4.11",
+    "usemin-cli": "^0.6.0"
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
+    "concurrently": "^5.3.0",
     "jquery": "^3.5.1",
     "open-iconic": "^1.1.1",
     "popper.js": "^1.16.1"

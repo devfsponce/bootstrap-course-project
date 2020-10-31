@@ -9,19 +9,16 @@
     />
 
     <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
-
-    <script src="https://kit.fontawesome.com/7c5d2c1141.js"></script>
-
-    <!--CSS-->
-    <link rel="stylesheet" href="css/main.css" />
-
-    <!--Open Iconic-->
+   <!--build:css dist/psicomotricidad.css-->
+   <link
+     rel="stylesheet"
+     href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+  />
+    <link rel="stylesheet" href="css/main.css" />   
     <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css" />
+    <!--endbuild-->
 
+<script src="https://kit.fontawesome.com/7c5d2c1141.js"></script>
 
     <title>ATPP - ¿Que es la Psicomotricidad</title>
   </head>
@@ -257,14 +254,54 @@
     </footer>
 
     <!-- SCRIPTS -->
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/popper.js/dist/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+     <!--build:js dist/psicomotricidad.js--> 
+      
+   <script src="node_modules/jquery/dist/jquery.min.js"></script>
+   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <script>
-      $(window).scroll(function(){
-        $('nav').toggleClass('scrolled', $(this).scrollTop() > 200);
-      })
-    </script>
+   <script>
+     $(window).scroll(function(){
+       $('nav').toggleClass('scrolled', $(this).scrollTop() > 200);
+     })
+   </script>
+
+   <script>      
+     $(function(){
+       $("[data-toggle='tooltip']").tooltip();
+     });
+
+     $(function(){
+       $("[data-toglle='popover']").popover;
+     });
+
+     $('.carousel').carousel({
+       interval: 1000
+     });
+
+     $('#reserva').on('show.bs.modal', function(e){
+       console.log('Modal Activo');
+
+       $('#reserva-btn').removeClass('btn-primary');
+       $('#reserva-btn').addClass('btn-outline-success');
+       $('#reserva-btn').prop('disable', true);
+     });
+
+     $('#reserva').on('shown.bs.modal', function(e){
+       console.log('Modal se activó');
+       });
+
+       $('#reserva').on('hide.bs.modal', function(e){
+       console.log('Modal desactivandose');
+       });
+
+       $('#reserva').on('hidden.bs.modal', function(e){
+       console.log('Modal se desactivó');
+       $('#reserva-btn').prop('disabled', false);
+       });
+       
+
+   </script>
+   <!-- endbuild -->
   </body>
 </html>

@@ -254,7 +254,7 @@
     </footer>
 
     <!-- SCRIPTS -->
-     <!--build:js dist/psicomotricidad.js--> 
+     <!--build:js dist/main.js--> 
       
    <script src="node_modules/jquery/dist/jquery.min.js"></script>
    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
@@ -265,43 +265,7 @@
        $('nav').toggleClass('scrolled', $(this).scrollTop() > 200);
      })
    </script>
-
-   <script>      
-     $(function(){
-       $("[data-toggle='tooltip']").tooltip();
-     });
-
-     $(function(){
-       $("[data-toglle='popover']").popover;
-     });
-
-     $('.carousel').carousel({
-       interval: 1000
-     });
-
-     $('#reserva').on('show.bs.modal', function(e){
-       console.log('Modal Activo');
-
-       $('#reserva-btn').removeClass('btn-primary');
-       $('#reserva-btn').addClass('btn-outline-success');
-       $('#reserva-btn').prop('disable', true);
-     });
-
-     $('#reserva').on('shown.bs.modal', function(e){
-       console.log('Modal se activó');
-       });
-
-       $('#reserva').on('hide.bs.modal', function(e){
-       console.log('Modal desactivandose');
-       });
-
-       $('#reserva').on('hidden.bs.modal', function(e){
-       console.log('Modal se desactivó');
-       $('#reserva-btn').prop('disabled', false);
-       });
-       
-
-   </script>
+   <script src="js/main.js"></script>
    <!-- endbuild -->
   </body>
 </html>
